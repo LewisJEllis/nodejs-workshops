@@ -1,6 +1,6 @@
 # NodeJS Workshops
 
-A series of three 2-hour talks/workshops which I gave as the main part of [CodeWeekend](http://the-dining-philosophers.github.io/code-weekend/), leading up to the Fall 2014 PennApps hackathon. They were preceded by a workshop (not given by me) covering installation, setup, using the command line, and some basic HTML/CSS/JS.
+A series of three 2-hour talks/workshops which I gave as the main part of [CodeWeekend](http://the-dining-philosophers.github.io/code-weekend/), leading up to the Fall 2014 PennApps hackathon. They were preceded by a workshop (not given by me) covering installation, setup, using the command line, and some basic HTML/CSS/JS. You can probably find video recordings [here](http://www.youtube.com/channel/UCD_kZii-CegibJ3b36Xo1Eg).
 
 The three talks were on:
 
