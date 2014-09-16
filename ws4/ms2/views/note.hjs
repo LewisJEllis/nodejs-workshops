@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Note: {{ note.title }}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    {{#message}}
+      <h3>{{message}}</h3>
+    {{/message}}
+    <h1>{{ note.title }}</h1>
+    <p>{{ note.body }}</p>
+    <form action='email' method='post'>
+      <label for='email'>Send note to: </label>
+      <input type='email' name='email' placeholder='Email'>
+      <input type='hidden' name='note' value='{{ note._id }}'>
+      <input type='submit' name='Send'>
+    </form>
+    <a href='/'>Go back</a>
+  </body>
+</html>

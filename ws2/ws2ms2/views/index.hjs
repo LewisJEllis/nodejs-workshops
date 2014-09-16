@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>{{ title }}</h1>
+    {{#message}}
+      <h3>{{message}}</h3>
+    {{/message}}
+    <p>Welcome to {{ title }}. Soon you'll have notes!</p>
+  </body>
+</html>

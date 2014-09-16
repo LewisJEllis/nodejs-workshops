@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Venmo Dashboard</h1>
+    {{#message}}
+      <h3>{{message}}</h3>
+    {{/message}}
+    <p>Welcome to the Venmo dashboard!</p>
+    {{#venmoUser}}
+      <p>Authenticated as {{display_name}} ({{username}})</p>
+      <p>Payment history:</p>
+      <ul>
+      {{#venmoPayments}}
+        <li>Paid ${{amount}} to {{recipient}} ({{phone}}) - {{formattedDate}}</li>
+      {{/venmoPayments}}
+      {{^venmoPayments}}
+        <li>None yet!</li>
+      {{/venmoPayments}}
+      </ul>
+      <p>Make a new payment:</p>
+      <form action='/venmo/send' method='post'>
+        Pay $<input type='text' name='amount' placeholder='Amount in dollars'> to <input type='text' name='phone' placeholder='Phone Number'> for:<br/>
+        <textarea name='note' rows='3' cols='80' placeholder='For...'></textarea><br/>
+        <input type='submit' name='Send Payment'>
+      </form>
+    {{/venmoUser}}
+    {{^venmoUser}}
+      <p>You have not authorized yet. <a href='authorize'>Click here</a> to authorize with Venmo.</p>
+    {{/venmoUser}}
+  </body>
+</html>
